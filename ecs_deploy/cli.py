@@ -445,15 +445,15 @@ def deploy_task_definition(deployment, task_definition, title, success_message,
 
     click.secho(message, fg='green')
 
-    wait_for_finish(
-        action=deployment,
-        timeout=timeout,
-        title=title,
-        success_message=success_message,
-        failure_message=failure_message,
-        ignore_warnings=ignore_warnings,
-        sleep_time=sleep_time
-    )
+    # wait_for_finish(
+    #     action=deployment,
+    #     timeout=timeout,
+    #     title=title,
+    #     success_message=success_message,
+    #     failure_message=failure_message,
+    #     ignore_warnings=ignore_warnings,
+    #     sleep_time=sleep_time
+    # )
 
     if deregister:
         deregister_task_definition(deployment, previous_task_definition)
